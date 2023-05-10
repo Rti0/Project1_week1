@@ -1,135 +1,113 @@
-//1.
-// public class Main {
-//    public static void main(String[] args) {
-//        System.out.println("Hello world!");
-//    }
-//}
+//import static jdk.internal.org.jline.utils.Colors.s;
 
-//2.
-//public class CombineStrings {
-//    public static void main(String[] args) {
-//        String string1 = "Hello ";
-//        String string2 = "World!";
-//        String combinedString = combineStrings(string1, string2);
-//        System.out.println(combinedString);
-//    }
 //
-//    public static String combineStrings(String string1, String string2) {
-//        return string1 + string2;
-//    }
-//}
-
-//3.
-//public class main {
+//public class Main {
 //    public static void main(String[] args) {
-//        int num1 = 25;
-//        int num2 = 10;
-//        int num3 = 30;
-//        int result = findGreatestNumber(num1, num2, num3);
-//        System.out.println("The greatest number is: " + result);
-//    }
-//    public static int findGreatestNumber(int num1, int num2, int num3) {
-//        int greatestNumber;
-//        if (num1 >= num2 && num1 >= num3) {
-//            greatestNumber = num1;
-//        } else if (num2 >= num1 && num2 >= num3) {
-//            greatestNumber = num2;
-//        } else {
-//            greatestNumber = num3;
+        //Question 1
+//            System.out.println("Hello World");
 //        }
-//        return greatestNumber;
+        //Question 2
+//            String a="reem ";
+//            String b = " ibrahim";
+//            {
+//                System.out.println(a+b);
+//        }
+//  }
 //    }
-//}
+//        //Question 3
+public class Main {
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int result = max(a,b,c);
+        System.out.println(result);
+    }
 
-//4.
-//public class main {
-//    public static void main(String[] args) {
-//        int num1 = 10;
-//        int num2 = 20;
-//        int num3 = 30;
-//        int sum = findSum(num1, num2, num3);
-//        double average = findAverage(num1, num2, num3);
-//        System.out.println("The sum is: " + sum);
-//        System.out.println("The average is: " + average);
-//    }
-//
-//    public static int findSum(int num1, int num2, int num3) {
-//        return num1 + num2 + num3;
-//    }
-//
-//    public static double findAverage(int num1, int num2, int num3) {
-//        return (num1 + num2 + num3) / 3.0;
-//    }
-//}
-
-
-//5.
+    public static int max(int a, int b, int c) {
+            if (a >= b && a >= c)
+                return a;
+            else if (b >= a && b >= c)
+                return b;
+            else
+                return c;
+        }
+//        Question 4
+        public static double SumAndAverage(int a, int b, int c){
+        int sum = a + b + c;
+        double avg = sum / 3.0;
+        return avg;
+        }}
+        //Question 5
 //import java.util.Scanner;
-//
-//public class main {
+//public class Main {
 //    public static void main(String[] args) {
 //        Scanner input = new Scanner(System.in);
-//        System.out.print("Enter the first number: ");
-//        double num1 = input.nextDouble();
-//        System.out.print("Enter the second number: ");
-//        double num2 = input.nextDouble();
-//        System.out.print("Enter the operation (+, -, , /): ");
+//        System.out.println("input a");
+//        double a = input.nextDouble();
+//        System.out.println("input b");
+//        double b = input.nextDouble();
+//        System.out.print("Enter the operation (+, -, *, /): ");
+//        char c = input.next().charAt(0);
 //        char operation = input.next().charAt(0);
-//        double result = calculate(num1, num2, operation);
-//        System.out.println("The result is: " + result);
+//        double res = calculate(a, b, operation);
+//        System.out.println(res);
 //    }
-//
-//    public static double calculate(double num1, double num2, char operation) {
-//        double result = 0;
-//        switch (operation) {
-//            case '+':
-//                result = num1 + num2;
-//                break;
-//            case '-':
-//                result = num1 - num2;
-//                break;
-//            case '*':
-//                result = num1 * num2;
-//                break;
-//            case '/':
-//                if (num2 == 0) {
-//                    System.out.println("Cannot divide by zero");
+//        public static double calculate(double a, double b, char c) {
+//            double res = 0;
+//            switch (c) {
+//                case '+':
+//                    res = a + b;
+//                    break;
+//                case '-':
+//                    res = a - b;
+//                    break;
+//                case '*':
+//                    res = a * b;
+//                    break;
+//                case '/':
+//                    if (b == 0) {
+//                        System.out.println("Cannot divide by zero");
+//                        System.exit(0);
+//                    }
+//                    res = a / b;
+//                    break;
+//                default:
+//                    System.out.println("Invalid operation");
 //                    System.exit(0);
+//            }
+//            return res;
+//        }}
+
+        //challenge1
+//        public class Main {
+//        static String[] names = {"Reem","mona","mona","Ali","Hind","Ali"};
+//    public static void main(String[] args) {
+//        printUniqueNumbers(names);   }
+//    public static void printUniqueNumbers(String[] arr) {
+//            for (int i = 0; i < arr.length; i++) {
+//
+//                boolean f = true;
+//
+//                for (int j = 0; j < arr.length; j++) {
+//
+//                    if (i != j && arr[i] == arr[j]) {
+//                        f = false;
+//                        break;
+//                    }
 //                }
-//                result = num1 / num2;
-//                break;
-//            default:
-//                System.out.println("Invalid operation");
-//                System.exit(0);
+//                if (f) {
+//                    System.out.print(arr[i] + " ");
+//                }
+//            }
 //        }
-//        return result;
 //    }
-//}
-
-//<<Challenge>>
-//Challenge 1:
-
-//public class main {
-//     public static void main(String[] args) {
-//          int [] numbers = {1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, 9, 9};
-//          printUniqueNumbers(numbers);   }
-//     public static void printUniqueNumbers(int[] arr) {
-//          for(int i = 0; i < arr.length; i++) {
-//               boolean isUnique = true;
-//               for(int j = 0; j < arr.length; j++) {
-//                    if(i != j && arr[i] == arr[j]) {
-//                         isUnique = false;
-//                         break;         }       }
-//               if(isUnique) {
-//                    System.out.print(arr[i] + " ");       }     }   } }
-
-//Challenge 2:
-
-//public class main {
-//    public static int countVowels(String str) {
+        //challenge2
+//        public class Main {
+//    public static int countVowels(String s) {
 //        int count = 0;
-//        for (int i = 0; i < str.length(); i++) {
-//            switch (str.toLowerCase().charAt(i)) {
+//        for (int i = 0; i < s.length(); i++) {
+//            switch (s.toLowerCase().charAt(i)) {
 //                case 'a':
 //                case 'e':
 //                case 'i':
@@ -140,21 +118,22 @@
 //            }       }
 //        return count;    }
 //    public static void main(String[] args) {
-//        String str = "A programmer does not reinvent the wheel";
+//        String str = "Welcome to Tuwaiq Academy ";
 //        int vowels = countVowels(str);
-//        System.out.println("Total vowels: " + vowels);    } }
+//        System.out.println(vowels);    } }
 
-//Challenge 3:
-
-public class main {
-    public static void splitAndPrint(String input) {
-        String[] words = input.split(" ");
-        for (String word : words) {
-            System.out.println(word);
-        }     }
-    public static void main(String[] args) {
-        String input = "Hello, world! This is a test.";
-        splitAndPrint(input);     } }
-
+//challenge 3
+//      public class Main {
+//          public static void main(String[] args) {
+//          String[] w = input.split(" ");
+//
+//          for (String r : w) {
+//
+//              System.out.println(r);
+//
+//          } }
+//
+//        static String input = "Hello World!";
+//}
 
 
